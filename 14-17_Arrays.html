@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+</head>
+<body>
+
+    <h1>Hello JS Array</h1>
+
+    <h2></h2>
+
+    <ol id="list">
+        
+    </ol>
+
+    
+
+    <h1 class="movies"></h1>
+    <ol class="movielist">
+    </ol>
+    <h2 class="length">Array length</h2>
+
+
+
+    <h1>favorite Cars</h1>
+    <p class="favcars">
+
+    </p>
+
+
+
+
+
+    <div id="studentper">
+<h2></h2>
+    </div>
+
+
+
+    <div id="show1stcolor">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+
+    <div id="showlastcolor">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+
+
+    <div id="addcolors">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+    <div id="removefirstcolor">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+    <div id="removelastcolor">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+    <div id="indexcolor">
+        <h2>
+
+        </h2>
+
+    </div>
+
+    <div id="indexcolorremove">
+        <h2>
+
+        </h2>
+
+    </div>
+  
+    <div id="scorestudents">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+    <div id="fruitlist">
+        <h2>
+
+        </h2>
+
+    </div>
+
+    <div id="selectedcities">
+        <h2>
+
+        </h2>
+
+    </div>
+  
+    <div id="arraytostring">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+    <div id="Devices">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+    <select name="phone_manufacturers" id="phone">
+        
+        
+      </select>
+  
+
+
+      <div id="multi">
+        <h2>
+
+        </h2>
+
+    </div>
+
+
+
+</body>
+
+<script>
+
+
+
+
+// ------------------------------------------------------------- IF	STATEMENTS NESTED |	ARRAYS|	|--------------------------------------------------------------------------
+
+
+
+// 1. Declare an empty array using JS literal notation to store student names in future.
+
+let nameArray = [];
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// 2. Declare an empty array using JS object notation to store student names in future.
+
+
+
+
+let student_name = new Array();
+student_name [0] = "Alice";
+student_name [1] = "Bob";
+student_name [2] = "Charlie";
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// 3. Declare and initialize a strings array.
+
+
+
+let stringArray = ['html' , 'css' , 'javascript']
+console.log(stringArray);
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// 4. Declare and initialize a numbers array.
+
+
+
+let numArray = [12 , 13 , 14]
+console.log(numArray);
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+// 5. Declare and initialize a boolean array.
+
+
+let booleanArray = [true , false]
+console.log(booleanArray);
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+// 6. Declare and initialize a mixed array
+
+
+
+let mixArray = ["Honda" , "Reborn" , 2014 , true]
+console.log(mixArray);
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// 7. Declare and Initialize an array and store available mobile networks in Pakistan.
+
+let mobNetwork = ["Zong" , "Ufone" , "Jazz" , "Telenor" , "Warid"]
+console.log(mobNetwork);
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+// 8. Declare and Initialize an array and store available education qualifications in Pakistan
+//    (e.g. SSC, HSC, BCS, BS, BCOM, MS, M. Phil., PhD). Show the listed qualifications in your browser
+
+
+const h2 = document.querySelector("h2");
+h2.innerHTML = "Qualifications: ";
+
+
+
+let digreeProgram = ['SSC', 'HSC', 'BCS', 'BS', 'BCOM', 'MS', 'M. Phil.', 'PhD']
+const list = document.querySelector('#list');
+
+
+for (let i = 0; i < digreeProgram.length; i++) {
+    
+    list.innerHTML += `<li>${digreeProgram[i]}</li>`
+    
+}
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// 9. Declare and initialize an empty array to store top movies of 2015. 
+//    Add movies one by one in an array. Display the elements & length of array in your browser. (Use array’s length method)
+
+
+
+const movies = document.querySelector(".movies");
+movies.innerHTML = "Top Movies of 2015"
+
+
+let movieNames = ["Avengers" , "SpiderMen" , "Jurassic World" , "Inside Out"];
+let movieList = document.querySelector(".movielist");
+let arrayLength = document.querySelector(".length")
+
+for (let e = 0; e < movieNames.length; e++) {
+   movieList.innerHTML += `<li>${movieNames[e]}</li>`;
+   arrayLength.innerHTML = "The Length of Array is: " + movieNames.length;
+     
+}
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+// 10. Declare and Initialize an array with your favorite cars. Show
+// a. First index of the array
+// b. Car at first index of the array
+// c. Last index of the array
+// d. Car at last index of the array
+
+
+
+const cars = ['Audi', 'Honda' , 'Nissan', 'Dodge' ];
+const favCars = document.querySelector(".favcars");
+const firstIndex = 0;
+const firstValue = cars[0];
+const lastIndex = cars.length - 1;
+const lastValue = cars[lastIndex];
+
+
+
+favCars.innerHTML += `<p>${cars}</p>`
+favCars.innerHTML += `<p>${"First Index of the Array is: " + cars.indexOf(firstValue)}</p>`
+favCars.innerHTML += `<p>${"Car at First Index of the Array is: " + cars[0]}</p>`
+favCars.innerHTML += `<p>${"Last Index of the Array is: " + cars.indexOf(lastValue)}</p>`
+favCars.innerHTML += `<p>${"Car at First Index of the Array is: " + cars[lastIndex]}</p>`
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+// Write a program to store 3 student names in an array. Take another array to store score of these three students. Assume
+// that total marks are 500 for each student, display the scores & percentages of students like:
+
+
+
+
+let studentName = ['Ahmed' , 'Ali' , 'Abdullah'];
+let studentMarks = [320 , 420 , 250];
+let totalMarks = 500;
+let result = document.querySelector("#studentper");
+
+for (let p = 0; p < studentName.length; p++) {
+   
+    let percentage = studentMarks[p] / totalMarks * 100 ;
+    result.innerHTML += `Scroe of ${studentName[p]} is ${studentMarks[p]}. Percentage is: ${percentage} % <br>`;
+    
+}
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+// Q No # 12. Initialize an array with color names. Display the array elements in your browser
+
+
+const colors = ['Red' , 'Blue' , 'Green' , 'Yellow'];
+
+// a. Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array. Display the updated array in your browser.----------------
+
+
+let = show_1st = prompt("What color do you want to add to the beginning");
+
+
+for (let c = 0; c < colors.length; c++) {
+
+    if (colors[c] == show_1st) {
+
+        let removeColor = colors.splice(c , 1);
+        colors.unshift(removeColor[0]);
+        show1stcolor.innerHTML += `<h2> 1st color Added </h2> ${colors}`
+        break;
+               
+    } 
+
+    
+}
+
+
+// b. Ask the user what color he/she wants to add to the end & add that color to the end of the array. Display the updated array in your browser.----------------------------
+
+
+let = showLastColor = prompt("What Color do you want to add in last value");
+
+
+for (let l = 0; l < colors.length; l++) {
+
+    if (colors[l] == showLastColor) {
+
+
+        let removeColorLast = colors.splice(l , 1)
+        colors.push(showLastColor)
+        showlastcolor.innerHTML  += `<h2> Last color Added </h2> ${colors}`
+        break;
+                
+    }
+    
+}
+
+// c. Add two more color to the beginning of the array. Display the updated array in your browser.------------------------------------------------------------------------
+
+let addColor1 = prompt("Enter First Colors");
+let addColor2 = prompt("Enter Second Colors");
+colors.unshift(addColor2 , addColor1);
+addcolors.innerHTML +=`<h2>Added Two Colors</h2> ${colors}`
+
+
+
+// d. Delete the first color in the array. Display the updated array in your browser.-------------------------------------------------------------------------------------------
+
+colors.shift();
+removefirstcolor.innerHTML+= `<h2>First Color is Removed </h2>${colors}`
+
+
+
+// e. Delete the last color in the array. Display the updated array in your browser.---------------------------------------------------------------------------------------------
+
+colors.pop();
+removelastcolor.innerHTML+= `<h2>Last Color is Removed </h2>${colors}`
+
+
+
+
+// f. Ask the user at which index he/she wants to add a color & color name. Then add the color to desired position/index. . Display the updated array in your browser.-----------
+
+let indexInput = prompt("which index do you want to add a color");
+let indexcolorInput = prompt("which color do you want to add in index " +indexInput );
+
+colors.splice(indexInput , 0 , indexcolorInput);
+indexcolor.innerHTML+= `<h2>Add Color through Index Number </h2>${colors}`
+
+
+
+// g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. 
+// Then remove the same number of color(s) from user-defined position/index. . Display the updated array in your browser.----------------------------------------------------------
+
+let indexRemove = prompt("Enter a Index Number to Remove a Color");
+let indexLengthRemove = prompt("Enter a Number How many Number you want to Remove")
+
+
+colors.splice(indexRemove, indexLengthRemove)
+indexcolorremove.innerHTML+= `<h2>Remove Color through Index Number </h2>${colors}`
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// 13. Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method. 
+
+let socreStudent = [320 , 230 , 480 , 120 ];
+
+socreStudent.sort();
+
+scorestudents.innerHTML = `<h2>Ordered Scores of Students</h2> ${socreStudent}`
+
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+// 14. Write a program to sort the below mentioned array: 
+
+var fruits = ['strawberry', 'apple', 'orange', 'banana'];
+
+
+fruitlist.innerHTML += `<h2>Fruit List</h2> ${fruits}`
+
+fruits.sort();
+
+fruitlist.innerHTML += `<h2>Ordered Fruit List</h2> ${fruits}`
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// 15. Write a program to initialize an array with city names. Copy 3 array elements from cities array to selectedCities array. 
+
+
+let cities = ['karachi', 'lahore', 'islamabad', 'peshawar', 'Quetta'];
+
+let selectedCities = cities.slice(2);
+selectedCities.splice(1, 1)
+console.log(selectedCities);
+
+selectedcities.innerHTML+= `<h2>Selected Cities</h2> ${selectedCities}`;
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+// 16. Write a program to create a single string from the below mentioned array:
+
+
+var arr = ['This ', ' is ', ' my ', ' cat' ];
+
+var text = arr.join(' ');
+arraytostring.innerHTML+= `<h2>Array To String</h2> ${text}`;
+
+
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+// 17. Create a new array. Store values one by one in such a way that you can access the values in the order in which they were stored. (FIFO-First In First Out) 
+
+
+let devices = ['keyboard' , 'mouse' , 'printer' , 'moniter'];
+
+Devices.innerHTML += `<h2>Devices: </h2>${devices}`
+console.log(devices);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// 18. Create a new array. Store values one by one in such a way that you can access the values in reverse order. (Last In-First Out)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// 19. Write a program to store phone manufacturers (Apple, Samsung, Motorola, Nokia, Sony & Haier) in an array.
+// Display the following dropdown/select menu in your browser using document.write() method:
+
+
+
+let phoneManufacturers = ['Apple', 'Samsung', 'Motorola', 'Nokia', 'Sony' , 'Haier']
+
+let phone = document.querySelector('#phone');
+
+
+for (let d = 0; d < phoneManufacturers.length; d++) {
+    
+    phone.innerHTML += `<option>${phoneManufacturers[d]}</option>`
+    
+}
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+// 20. Declare and initialize an empty multidimensional array. (Array of arrays)
+
+
+
+var multiDimensionalArray = [
+   [],
+   [],
+   [],
+   [],
+];
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// 21. Declare and initialize a multidimensional array representing the following matrix:
+
+
+multiDimensionalArray = [
+
+[0 , 1, 2, 3],
+[1 , 0, 1, 1],
+[2 , 1, 0, 1],
+
+];
+
+console.log(multiDimensionalArray);
+
+multi.innerHTML +=`<h2>${multiDimensionalArray[0]}</h2>`
+multi.innerHTML +=`<h2>${multiDimensionalArray[1]}</h2>`
+multi.innerHTML +=`<h2>${multiDimensionalArray[2]}</h2>`
+
+
+
+// ------------------------------------------------------------------------------------END-------------------------------------------------------------------------------------
+
+</script>
+</html>
